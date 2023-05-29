@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <title>My Garden</title>
+    </head>
+    <body>
+        <h1>Armazém de Flores</h1>
+
+        <hr />
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nº</th>
+                    <th>Nome</th>
+                    <th>Qntd.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="flor:${flores}">
+                    <td th:text="${flor.id}"></td>
+                    <td th:text="${flor.nome}"></td>
+                    <td th:text="${flor.qntd}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
